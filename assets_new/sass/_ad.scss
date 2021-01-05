@@ -1,0 +1,90 @@
+.banner {
+    position: relative;
+    min-height: 152px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: #f7f7f7;
+    border: solid $gray-100;
+    border-width: 1px 0;
+    &.opened {
+        z-index: 10;
+    }
+    img {
+        margin: auto;
+        max-width: 100%;
+        height: auto;
+    }
+    &.fixed {
+        margin-bottom: 60px;
+        @include breakpoint(1024px) {
+            margin-bottom: 65px;
+        }
+    }
+}
+
+#div-incover-ad+.banner {
+    padding-top: 0;
+    padding-bottom: 0;
+    background-color: transparent;
+    border: 0;
+}
+
+.couplet-wide,
+.couplet-left,
+.couplet-right {
+    display: none;
+    @include breakpoint(max-width 1023px) {
+        display: none !important;
+    }
+}
+
+.couplet-left,
+.couplet-right {
+    position: absolute;
+    top: -250px;
+    width: 300px;
+}
+
+.couplet-left {
+    left: calc((100% - #{$index}) / 2 - 320px);
+}
+
+.couplet-right {
+    right: calc((100% - #{$index}) / 2 - 320px);
+}
+
+.bottom-banner {
+    margin-top: -1.5em;
+    margin-bottom: 50px;
+}
+
+.index-page {
+    .couplet-wide,
+    .couplet-left,
+    .couplet-right {
+        display: block;
+    }
+}
+
+// 所有廣告置中
+.cw__advertising,
+.leafletBig,
+.leaflet {
+    text-align: center;
+}
+.leafletBig {
+    width: 302px;
+    height: 602px;
+}
+.leaflet {
+    width: 302px;
+    height: 252px;
+}
+.leafletBig,
+.leaflet {
+    @include breakpoint(1024px) {
+        margin-left: -1px;
+        margin-right: -1px;
+        border: 1px solid $gray-200;
+    }
+}

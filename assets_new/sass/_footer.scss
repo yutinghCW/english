@@ -1,0 +1,106 @@
+footer {
+    position: relative;
+    width: 100%;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: $gray-100;
+    .footerContent {
+        max-width: $article;
+        width: 100%;
+        margin: auto;
+        padding-left: 20px;
+        padding-right: 20px;
+        &::after {
+            @include clear();
+        }
+    }
+    .app-download {
+        @include breakpoint(768px) {
+            float: right;
+        }
+        h3 {
+            margin-top: 0;
+            margin-bottom: 10px;
+            @include serif();
+            font-size: 0.875rem;
+            @include breakpoint(768px) {
+                text-align: center;
+                span {
+                    display: block;
+                }
+            }
+        }
+        ul {
+            @include listrest(0, 0, none);
+            @include breakpoint(768px) {
+                text-align: center;
+            }
+            li {
+                display: inline-block;
+                vertical-align: middle;
+            }
+        }
+    }
+    .contact-infomation {
+        font-size: 0.875rem;
+        @include breakpoint(768px) {
+            float: left;
+            width: calc(100% - 280px);
+        }
+        @include breakpoint(max-width 767px) {
+            margin-top: 20px;
+        }
+        p, address, span {
+            @include serif();
+            font-style: normal;
+            @include breakpoint(768px) {
+                margin-bottom: 0;
+            }
+            span {
+                display: inline-block;
+            }
+        }
+        p {
+            font-size: 0;
+            span {
+                margin-right: 1em;
+                font-size: 0.875rem;
+            }
+        }
+        address {
+            @include breakpoint(max-width 767px) {
+                margin-top: 20px;
+                margin-bottom: 10px;
+            }
+        }
+        h3 {
+            display: none;
+        }
+        ul {
+            @include listrest(0 0 10px, 0, none);
+            font-size: 0;
+            @include breakpoint(max-width 767px) {
+                display: none;
+            }
+            li {
+                display: inline-block;
+                vertical-align: middle;
+                line-height: 1;
+                + li {
+                    margin-left: 10px;
+                    padding-left: 10px;
+                    border-left: 1px solid $black;
+                }
+                a {
+                    display: block;
+                    color: $black;
+                    font-size: 0.875rem;
+                    text-transform: uppercase;
+                    &:hover {
+                        color: $primary;
+                    }
+                }
+            }
+        }
+    }
+}

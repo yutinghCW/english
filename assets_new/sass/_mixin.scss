@@ -1,0 +1,94 @@
+
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+@mixin sans() {
+    font-family: PT Sans, sans-serif;
+}
+@mixin serif() {
+    font-family: Georgia, Libre Baskerville, serif;
+}
+
+@mixin listrest($margin, $padding, $style) {
+    margin: $margin;
+    padding: $padding;
+    list-style: $style;
+}
+
+@mixin beforeafter($content, $display) {
+    content: $content;
+    display: $display;
+}
+
+@mixin serif() {
+    font-family: Georgia, 'Libre Baskerville', serif;
+}
+
+@mixin clear() {
+    @include beforeafter('', table);
+    clear: both;
+}
+
+@mixin lineclamp($line) {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: $line;
+    -webkit-box-orient: vertical;
+}
+
+@mixin ellipsis() {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+@mixin imghover() {
+    &::before {
+        // position: absolute;
+        // top: 0;
+        // bottom: 0;
+        // left: 0;
+        // right: 0;
+        position: relative;
+        width: 100%;
+        padding-top: 66.984127%;
+        @include beforeafter('', block);
+        background-color: rgba($black, 0.5);
+        background-image: -webkit-radial-gradient(center center, closest-side ellipse, rgba(255, 255, 255, .1) 30%, rgba(0, 0, 0, .4) 130%);
+        @include opacity(0);
+        @include transition(opacity 0.3s);
+        z-index: 1;
+    }
+}
+
+@mixin outlinebtn($display, $padding, $color, $fontsize) {
+    display: $display;
+    padding: $padding $padding*2;
+    min-width: 120px;
+    color: $color;
+    font-size: $fontsize;
+    font-weight: 400;
+    text-align: center;
+    line-height: 1;
+    border: 1px solid $color;
+    &:hover {
+        color: darken($color, 5%);
+        border-color: darken($color, 5%);
+    }
+}
+
+@mixin containbtn($display, $padding, $color, $fontsize) {
+    display: $display;
+    padding: $padding $padding*2;
+    min-width: 120px;
+    color: $white;
+    font-size: $fontsize;
+    font-weight: 400;
+    text-align: center;
+    line-height: 1;
+    background-color: $color;
+    border: 1px solid $color;
+    &:hover {
+        background-color: darken($color, 5%);
+        border-color: darken($color, 5%);
+    }
+}

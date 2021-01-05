@@ -1,0 +1,94 @@
+.download {
+    padding: 20px 0px;
+    margin-bottom: 1.5rem;
+    font-size: 0;
+    border: solid $gray-100;
+    border-width: 1px 0;
+    text-align: center;
+    @include breakpoint(768px) {
+        text-align: right;
+    }
+    >a {
+        display: inline-block;
+        color: $black;
+        font-size: 1.125rem;
+        line-height: 1.5;
+        vertical-align: middle;
+        background-repeat: no-repeat;
+        background-position: center right;
+        cursor: pointer;
+        span {
+            color: $primary;
+            @include transition(color 0.3s);
+        }
+    }
+    .dowloadLink,
+    .payreadLink {
+        width: 120px;
+        text-align: left;
+        line-height: 50px;
+        &:hover {
+            color: $primary;
+        }
+    }
+    .dowloadLink {
+        margin-right: 2rem;
+        background-image: url('../img/download_arrow.png');
+        @include breakpoint(max-width 767px) {
+            margin-left: 1em;
+        }
+        &.noPdf {
+            color: $gray-400;
+            @include opacity(0.5);
+            cursor: not-allowed;
+            span {
+                color: $gray-400;
+            }
+        }
+    }
+    .payreadLink {
+        background-image: url('../img/payread.png');
+        &.noPay {
+            color: $gray-400;
+            @include opacity(0.5);
+            cursor: not-allowed;
+            span {
+                color: $gray-400;
+            }
+        }
+    }
+    .nextArticle {
+        position: relative;
+        padding-right: 35px;
+        text-align: right;
+        // background-image: url('../img/download_arrow_right.png');
+        &::after {
+            @include beforeafter($icon-right, block);
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            color: $secondary;
+            font-size: 1.5rem;
+            font-family: $icomoon-font-family;
+            @include translateY(-50%);
+        }
+        @include breakpoint(768px) {
+            width: calc(100% - 240px - 6rem);
+            margin-left: 4rem;
+        }
+        span {
+            &:first-child {
+                display: inline-block;
+                padding-right: 1rem;
+            }
+            &:last-child {
+                color: $black;
+            }
+        }
+        &:hover {
+            span:last-child {
+                color: $primary;
+            }
+        }
+    }
+}

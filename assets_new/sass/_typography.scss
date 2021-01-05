@@ -1,0 +1,8 @@
+$h-color: $text, $text, $text, $primary, $secondary;
+$h-size: 2rem, 1.375rem, 1.125rem, 1rem, 0.875rem;
+@for $i from 1 through 5 {
+    h#{$i}, .h#{$i} {
+        font-size: nth($h-size, $i);
+        font-weight: 500;
+    }
+}

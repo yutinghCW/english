@@ -1,0 +1,32 @@
+.channel-page,
+.subChannel-page,
+.channel-fashion-page,
+.subChannel-fashion-page {
+    .class-header .list-inline {
+        @include breakpoint(max-width 767px) {
+            display: none;
+        }
+    }
+    .articleGroup {
+        @include breakpoint(768px) {
+            float: left;
+            width: ($article - 320 - 40);
+        }
+    }
+    article {
+        @include breakpoint(768px) {
+            width: 650px;
+        }
+        >.article {
+            margin-bottom: 15px;
+            background-color: $white;
+            @include breakpoint(768px) {
+                border: 1px solid $gray-200;
+                margin-bottom: 20px;
+            }
+            .caption p {
+                @include lineclamp(2);
+            }
+        }
+    }
+}
