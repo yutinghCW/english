@@ -1,5 +1,6 @@
 $(function () {
 	var width = $(window).width();
+	// $('body > .banner').css('margin-bottom', $('header').outerHeight());
 	$("header .subNav li.userName").click(function () {
 		$(this).toggleClass("opened");
 		$(this).children(".thirdNav").slideToggle();
@@ -143,12 +144,16 @@ $(function () {
 	});
 	$(window).scroll(function () {
 		var scrollTop = $(window).scrollTop();
-		$('body > .banner').css('margin-bottom', $('header').outerHeight());
+		// $('body > .banner').css('margin-bottom', $('header').outerHeight());
 		// header
-		if ( scrollTop >= $('body > .banner').outerHeight() ) {
-			$('header').addClass('fixed');
-		} else {
-			$('header').removeClass('fixed');
+		if ($('body > .banner').length > 0) {
+			if ( scrollTop >= $('body > .banner').outerHeight() ) {
+				$('header').addClass('fixed');
+				$('body').css('padding-top', $('header').outerHeight());
+			} else {
+				$('header').removeClass('fixed');
+				$('body').css('padding-top', 0);
+			}
 		}
 		if (location.href.match(/article/) && width >= 1025) {
 			var $informationArea = $(".informationArea").first();
@@ -162,4 +167,8 @@ $(function () {
 			}
 		}
 	});
+
+	if (width < 768) {
+		$("body > .banner img, .bottom-banner img").attr('src', 'https://fakeimg.pl/300x50/?retina=3').width(300);
+	}
 });

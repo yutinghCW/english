@@ -1,11 +1,16 @@
 .banner {
     position: relative;
-    min-height: 152px;
     padding-top: 30px;
     padding-bottom: 30px;
     background-color: #f7f7f7;
     border: solid $gray-100;
     border-width: 1px 0;
+    body > & {
+        min-height: 112px;
+        @include breakpoint(768px) {
+            min-height: 152px;
+        }
+    }
     &.opened {
         z-index: 10;
     }

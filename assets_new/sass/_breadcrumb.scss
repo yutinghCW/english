@@ -14,6 +14,10 @@
             display: inline-block;
             color: $gray-600;
             font-size: 1rem;
+            &::after {
+                @include beforeafter('>', inline-block);
+                margin: 0 5px;
+            }
             a {
                 display: inline-block;
                 color: $gray-600;
@@ -21,14 +25,8 @@
                     color: $primary;
                 }
             }
-            +li {
-                margin-left: 5px;
-                &::before {
-                    @include beforeafter('>', inline-block);
-                }
-                a {
-                    margin-left: 5px;
-                }
+            &:last-child::after {
+                display: none;
             }
         }
     }

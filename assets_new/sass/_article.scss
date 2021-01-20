@@ -1,8 +1,9 @@
 .article-page {
     > .banner {
-        margin-bottom: 56px;
+        // margin-bottom: 56px;
     }
     article {
+        font-weight: 300;
         @include breakpoint(768px) {
             float: left;
             width: ($article - 350);
@@ -117,13 +118,10 @@
                 font-weight: 600;
             }
             p {
-                img {
-                    margin-bottom: 10px;
-                }
                 span.source {
                     display: block;
-                    padding-bottom: 10px;
-                    color: $surface;
+                    padding-top: 5px;
+                    color: $secondary;
                     @include sans;
                     font-size: 0.85em;
                     line-height: 1.25;
@@ -166,10 +164,12 @@
                     &::before {
                         content: '\201C';
                         margin-right: 0.22em;
+                        @include serif;
                     }
                     &::after {
                         content: '\201D';
                         margin-left: 0.22em;
+                        @include serif;
                     }
                 }
             }
@@ -191,7 +191,7 @@
         address {
             padding-top: 1.5rem;
             padding-bottom: 1.5rem;
-            padding-right: 2rem;
+            padding-right: 7.5rem;
             color: $bluegray;
             @include sans;
             font-style: normal;
@@ -249,6 +249,7 @@
                 @include listrest(0, 0, none);
                 display: inline-block;
                 font-size: 0;
+                font-weight: normal;
                 li {
                     display: inline-block;
                     @include sans;
@@ -275,50 +276,60 @@
             position: absolute;
             top: 1.5rem;
             right: 0;
-            width: 1.5rem;
-            height: 1.5rem;
-            &::before,
-            &::after {
-                position: absolute;
-                top: 0;
-                left: 0;
-                @include beforeafter('', block);
-                width: 1.5rem;
-                height: 1.5rem;
-                background-position: center;
-                background-repeat: no-repeat;
-                @include background-size(contain);
-            }
-            &::before {
-                background-image: url('../img/fontsize.svg');
-                @include opacity(1);
-            }
-            &::after {
-                background-image: url('../img/fontsize_hover.svg');
-                @include opacity(0);
-            }
             a {
-                display: none;
-                position: absolute;
-                top: 125%;
-                left: 50%;
-                width: 90px;
-                margin-left: -45px;
-                padding: 5px;
-                color: $white;
-                font-size: 0.75em;
-                text-align: center;
-                background-color: rgba($black, 0.5);
-            }
-            &:hover {
-                &::before {
-                    @include opacity(0);
+                display: inline-block;
+                vertical-align: middle;
+                &.switch {
+                    padding: 0 10px;
+                    margin-right: 0.5rem;
+                    color: $black;
+                    font-size: 0.75rem;
+                    @include sans;
+                    font-weight: normal;
+                    line-height: 1.5rem;
+                    word-break: keep-all;
+                    background-color: $gray-100;
+                    &:hover {
+                        color: $white;
+                        background-color: $black;
+                    }
                 }
-                &::after {
-                    @include opacity(1);
-                }
-                a {
-                    display: block;
+                &.fontSize {
+                    position: relative;
+                    width: 1.5rem;
+                    height: 1.5rem;
+                    font-size: 0;
+                    &::before,
+                    &::after {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        @include beforeafter('', block);
+                        width: 1.5rem;
+                        height: 1.5rem;
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        @include background-size(contain);
+                    }
+                    &::before {
+                        background-image: url('../img/fontsize.svg');
+                        @include opacity(1);
+                    }
+                    &::after {
+                        background-image: url('../img/fontsize_hover.svg');
+                        @include opacity(0);
+                    }
+                    &:hover {
+                        &::before {
+                            @include opacity(0);
+                        }
+                        &::after {
+                            @include opacity(1);
+                        }
+                        a {
+                            display: block;
+                        }
+                    }
                 }
             }
         }

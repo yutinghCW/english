@@ -140,6 +140,7 @@
     article {
         @include breakpoint(768px) {
             width: 820px;
+            padding-left: 30px;
         }
     }
     .searchInput {
@@ -158,30 +159,36 @@
                 display: none;
             }
         }
-        h1 {
+        h1, h2 {
             margin-top: 0;
             margin-bottom: 0;
+        }
+        h1 {
             padding-right: 5px;
             font-size: 1.75em;
         }
     }
-    .articleGroup .subArticle {
-        .caption h3 a span,
-        .caption p span {
-            color: $primary;
-            font-weight: bold;
-        }
-        @include breakpoint(max-width 767px) {
-            .pic {
-                display: none;
+    .articleGroup {
+        border: 0;
+        .subArticle {
+            padding: 0;
+            .caption h3 a span,
+            .caption p span {
+                color: $primary;
+                font-weight: bold;
             }
-            .caption {
-                border-width: 1px;
-                h3 a {
-                    // font-size: 1.125rem;
+            @include breakpoint(max-width 767px) {
+                .pic {
+                    display: none;
                 }
-                p {
-                    display: -webkit-box !important;
+                .caption {
+                    border-width: 1px;
+                    h3 a {
+                        // font-size: 1.125rem;
+                    }
+                    p {
+                        display: -webkit-box !important;
+                    }
                 }
             }
         }
@@ -189,14 +196,13 @@
 }
 
 .searchCag {
-    padding-top: 10px;
-    @include breakpoint(max-width 767px) {
-        padding-bottom: 10px;
+    padding-top: 20px;
+    @include sans;
+    @include breakpoint(768px) {
+        padding-bottom: 15px;
     }
     ul {
-        @include listrest(0,
-        0,
-        none);
+        @include listrest(0, 0, none);
         font-size: 0;
         li {
             display: inline-block;

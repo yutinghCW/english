@@ -105,6 +105,7 @@ section {
         font-weight: normal;
         line-height: 1;
         vertical-align: middle;
+        text-transform: uppercase;
         &:hover {
             color: $white;
             background-color: $primary;
@@ -160,6 +161,7 @@ section {
     p {
         margin-top: 0;
         margin-bottom: 0;
+        color: $gray-500;
         @include serif();
         line-height: 1.4;
         @include lineclamp(2);
@@ -171,6 +173,12 @@ section {
 }
 
 .articleGroup {
+    margin-bottom: 10px;
+    @include breakpoint(768px) {
+        margin-bottom: 20px;
+        background-color: $white;
+        border: 1px solid $gray-200;
+    }
     .article {
         .caption {
             padding: 10px;
@@ -188,10 +196,11 @@ section {
     }
     .subArticle {
         align-items: center;
-        margin: 5px 0 15px;
+        margin: 15px 0;
         @include breakpoint(768px) {
             display: flex;
-            margin: 20px 0;
+            margin: 0 0 15px;
+            padding: 0 15px;
         }
         .pic {
             @include breakpoint(768px) {
@@ -216,8 +225,9 @@ section {
                 }
             }
             time {
-                right: 0;
+                right: 10px;
                 @include breakpoint(768px) {
+                    right: 0;
                     padding-top: 0;
                 }
             }

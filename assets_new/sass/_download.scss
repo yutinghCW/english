@@ -73,8 +73,8 @@
             @include translateY(-50%);
         }
         @include breakpoint(768px) {
-            width: calc(100% - 240px - 6rem);
-            margin-left: 4rem;
+            width: calc(100% - 240px - 2rem);
+            // margin-left: 4rem;
         }
         span {
             &:first-child {
