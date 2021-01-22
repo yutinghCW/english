@@ -2124,12 +2124,8 @@ header {
   left: 0;
   right: 0;
   font-size: 0;
+  border-bottom: 1px solid #EEEEEE;
   z-index: 8;
-}
-@media (min-width: 768px) {
-  header {
-    border-bottom: 1px solid #EEEEEE;
-  }
 }
 header.fixed {
   position: fixed;

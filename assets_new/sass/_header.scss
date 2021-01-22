@@ -4,10 +4,10 @@ header {
     left: 0;
     right: 0;
     font-size: 0;
+    border-bottom: 1px solid $gray-100;
     z-index: 8;
     @include breakpoint(768px) {
         // top: 152px;
-        border-bottom: 1px solid $gray-100;
     }
     &.fixed {
         position: fixed;
