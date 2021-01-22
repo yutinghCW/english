@@ -5338,13 +5338,15 @@ ul.article__keyword li a::-moz-focus-inner {
   }
 }
 
-.article-page article {
-  font-weight: 300;
-}
 @media (min-width: 768px) {
   .article-page article {
     float: left;
     width: 650px;
+  }
+}
+@media (min-width: 1200px) {
+  .article-page article {
+    font-weight: 300;
   }
 }
 .article-page article > h1 {
