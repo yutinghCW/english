@@ -2686,8 +2686,11 @@ footer .contact-infomation ul li a:hover {
 .searchInput > input,
 .searchInput > button {
   display: inline-block;
-  border: none;
   vertical-align: middle;
+  border: none;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
   -moz-transition: all 0.5s;
   -o-transition: all 0.5s;
   -webkit-transition: all 0.5s;
