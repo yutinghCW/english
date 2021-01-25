@@ -1,0 +1,85 @@
+.error-page {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: space-between;
+    header {
+        width: 100%;
+        .main-header .main-header-body {
+            padding-left: 15px;
+            padding-right: 15px;
+            .logo {
+                margin-left: 0;
+            }
+            .toggleSideMenu {
+                display: none;
+            }
+            .toggleSearchBlock {
+                display: none;
+            }
+        }
+    }
+    #search {
+        display: none;
+    }
+    .main-404 {
+        width: 100%;
+    }
+    .main {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    .content {
+        position: relative;
+        padding-top: 100px;
+        padding-bottom: 100px;
+        overflow: hidden;
+        z-index: 1;
+        @include breakpoint(1024px) {
+            padding-top: 150px;
+            padding-bottom: 150px;
+        }
+        &::before,
+        &::after {
+            @include beforeafter('', block);
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            @include background-size(contain);
+            background-repeat: no-repeat;
+            background-position: center;
+            z-index: -1;
+        }
+        &::before {
+            background-image: url('../img/error-gray.svg');
+            @include animation(rotate 30s infinite);
+        }
+        &::after {
+            background-image: url('../img/error-white.svg');
+            @include animation(rotate 20s infinite);
+        }
+        .h1 {
+            font-size: 3.125rem;
+        }
+        p {
+            @include breakpoint(1024px) {
+                font-size: 1.125rem;
+            }
+        }
+        .btn--contained {
+            @include sans;
+            text-transform: uppercase;
+        }
+    }
+}
+
+@include keyframes(rotate) {
+    0% {
+        @include rotate(0deg);
+    }
+    100% {
+        @include rotate(360deg);
+    }
+}

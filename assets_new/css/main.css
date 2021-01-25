@@ -6372,6 +6372,126 @@ ul.article__keyword li a::-moz-focus-inner {
   margin: 0;
 }
 
+.error-page {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: space-between;
+}
+.error-page header {
+  width: 100%;
+}
+.error-page header .main-header .main-header-body {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.error-page header .main-header .main-header-body .logo {
+  margin-left: 0;
+}
+.error-page header .main-header .main-header-body .toggleSideMenu {
+  display: none;
+}
+.error-page header .main-header .main-header-body .toggleSearchBlock {
+  display: none;
+}
+.error-page #search {
+  display: none;
+}
+.error-page .main-404 {
+  width: 100%;
+}
+.error-page .main {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.error-page .content {
+  position: relative;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  overflow: hidden;
+  z-index: 1;
+}
+@media (min-width: 1024px) {
+  .error-page .content {
+    padding-top: 150px;
+    padding-bottom: 150px;
+  }
+}
+.error-page .content::before, .error-page .content::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  -webkit-background-size: contain;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: -1;
+}
+.error-page .content::before {
+  background-image: url("../img/error-gray.svg");
+  -moz-animation: rotate 30s infinite;
+  -webkit-animation: rotate 30s infinite;
+  animation: rotate 30s infinite;
+}
+.error-page .content::after {
+  background-image: url("../img/error-white.svg");
+  -moz-animation: rotate 20s infinite;
+  -webkit-animation: rotate 20s infinite;
+  animation: rotate 20s infinite;
+}
+.error-page .content .h1 {
+  font-size: 3.125rem;
+}
+@media (min-width: 1024px) {
+  .error-page .content p {
+    font-size: 1.125rem;
+  }
+}
+.error-page .content .btn--contained {
+  font-family: 'Open Sans', sans-serif;
+  text-transform: uppercase;
+}
+
+@-moz-keyframes rotate {
+  0% {
+    -moz-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -moz-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotate {
+  0% {
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
 iframe[src*='etu.cw.com.tw'] {
   bottom: 0;
 }

@@ -51,6 +51,8 @@
 @import "_tls";
 // 作者頁
 @import "_author";
+// 錯誤頁
+@import "_error";
 iframe[src*='etu.cw.com.tw'] {
     bottom: 0;
 }
