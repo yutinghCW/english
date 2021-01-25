@@ -47,6 +47,7 @@
     }
     >ul {
         @include tab(33.33333%);
+        @include sans;
     }
 }
 

@@ -149,6 +149,7 @@ section {
         a {
             display: block;
             color: $black;
+            font-weight: 500;
             line-height: 1.25;
             @include breakpoint(768px) {
                 line-height: 1.5;

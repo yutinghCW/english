@@ -3221,6 +3221,7 @@ body.opened {
   padding: 0;
   list-style: none;
   font-weight: 400;
+  font-family: 'Open Sans', sans-serif;
 }
 .mobile-tab > ul::after {
   content: '';
@@ -3509,6 +3510,7 @@ body.opened {
 .caption h3 a {
   display: block;
   color: #171717;
+  font-weight: 500;
   line-height: 1.25;
 }
 @media (min-width: 768px) {
