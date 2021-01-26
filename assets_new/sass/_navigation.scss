@@ -28,15 +28,34 @@ body.opened {
 		&.sideMenuMain > li a {
 			padding: 0.9375em 0;
         }
-		&.sideMenuSocial > li a {
-			padding: 0.875em 0;
-            &::before, &::after {
-                display: inline-block;
-                vertical-align: middle;
-                margin-right: 5px;
-            }
-            &::before {
-                font-family: $icomoon-font-family;
+		&.sideMenuSocial{
+            border-top: 1px solid $gray-200;
+            > li{
+                &:nth-child(1) a {
+                    &:hover {
+                        color: $facebook;
+                    }
+                }
+                &:nth-child(2) a {
+                    &:hover {
+                        color: $twitter;
+                    }
+                }
+                &:nth-child(3) a {
+                    &:hover {
+                        color: $primary;
+                    }
+                }
+                a {
+                    padding: 0.875em 0;
+                    > * {
+                        display: inline-block;
+                        vertical-align: middle;
+                    }
+                    > span {
+                        margin-left: 5px;
+                    }
+                }
             }
         }
 	}
@@ -70,47 +89,6 @@ body.opened {
 			> li {
                 padding: 0 50px;
 			}
-		}
-	}
-	.sideMenuSocial {
-        border-top: 1px solid $gray-200;
-        li {
-            &:nth-child(1) a {
-                &::before {
-                    content: $icon-facebook;
-                }
-                &::after {
-                    content: 'Facebook';
-                }
-                &:hover {
-                    color: $facebook;
-                }
-            }
-            &:nth-child(2) a {
-                &::before {
-                    content: $icon-twitter;
-                }
-                &::after {
-                    content: 'Twitter';
-                }
-                &:hover {
-                    color: $twitter;
-                }
-            }
-            &:nth-child(3) a {
-                &::before {
-                    content: $icon-internet;
-                }
-                &::after {
-                    content: 'CW Daily App (Chinese Only)';
-                }
-                &:hover {
-                    color: $primary;
-                }
-            }
-        }
-		img {
-            display: none;
 		}
 	}
 }

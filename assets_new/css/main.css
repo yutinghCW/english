@@ -3002,16 +3002,27 @@ body.opened {
 .sideMenu ul.sideMenuMain > li a {
   padding: 0.9375em 0;
 }
+.sideMenu ul.sideMenuSocial {
+  border-top: 1px solid #D3D5D7;
+}
+.sideMenu ul.sideMenuSocial > li:nth-child(1) a:hover {
+  color: #1877F2;
+}
+.sideMenu ul.sideMenuSocial > li:nth-child(2) a:hover {
+  color: #00acee;
+}
+.sideMenu ul.sideMenuSocial > li:nth-child(3) a:hover {
+  color: #D60C18;
+}
 .sideMenu ul.sideMenuSocial > li a {
   padding: 0.875em 0;
 }
-.sideMenu ul.sideMenuSocial > li a::before, .sideMenu ul.sideMenuSocial > li a::after {
+.sideMenu ul.sideMenuSocial > li a > * {
   display: inline-block;
   vertical-align: middle;
-  margin-right: 5px;
 }
-.sideMenu ul.sideMenuSocial > li a::before {
-  font-family: "cw_icon";
+.sideMenu ul.sideMenuSocial > li a > span {
+  margin-left: 5px;
 }
 .sideMenu > ul > li {
   padding: 0px 25px;
@@ -3049,39 +3060,6 @@ body.opened {
 }
 .sideMenu .moreItem > ul.sudeMenuSub > li {
   padding: 0 50px;
-}
-.sideMenu .sideMenuSocial {
-  border-top: 1px solid #D3D5D7;
-}
-.sideMenu .sideMenuSocial li:nth-child(1) a::before {
-  content: "";
-}
-.sideMenu .sideMenuSocial li:nth-child(1) a::after {
-  content: 'Facebook';
-}
-.sideMenu .sideMenuSocial li:nth-child(1) a:hover {
-  color: #1877F2;
-}
-.sideMenu .sideMenuSocial li:nth-child(2) a::before {
-  content: "";
-}
-.sideMenu .sideMenuSocial li:nth-child(2) a::after {
-  content: 'Twitter';
-}
-.sideMenu .sideMenuSocial li:nth-child(2) a:hover {
-  color: #00acee;
-}
-.sideMenu .sideMenuSocial li:nth-child(3) a::before {
-  content: "";
-}
-.sideMenu .sideMenuSocial li:nth-child(3) a::after {
-  content: 'CW Daily App (Chinese Only)';
-}
-.sideMenu .sideMenuSocial li:nth-child(3) a:hover {
-  color: #D60C18;
-}
-.sideMenu .sideMenuSocial img {
-  display: none;
 }
 
 .main-nav {
