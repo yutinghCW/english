@@ -3478,13 +3478,14 @@ body.opened {
 }
 .caption h3 {
   margin-top: 10px;
-  margin-bottom: 5px;
+  margin-bottom: 0;
   font-family: 'Lora', serif;
   font-weight: normal;
 }
 @media (min-width: 768px) {
   .caption h3 {
     margin-top: 0;
+    margin-bottom: 5px;
   }
 }
 .caption h3 a {
@@ -3500,6 +3501,11 @@ body.opened {
 }
 .caption h3 a:hover {
   color: #D60C18;
+}
+@media (max-width: 767px) {
+  .caption h3 + p {
+    margin-top: 5px;
+  }
 }
 .caption p {
   margin-top: 0;

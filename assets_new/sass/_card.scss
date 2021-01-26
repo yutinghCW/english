@@ -140,11 +140,12 @@ section {
     }
     h3 {
         margin-top: 10px;
-        margin-bottom: 5px;
+        margin-bottom: 0;
         @include serif();
         font-weight: normal;
         @include breakpoint(768px) {
             margin-top: 0;
+            margin-bottom: 5px;
         }
         a {
             display: block;
@@ -156,6 +157,11 @@ section {
             }
             &:hover {
                 color: $primary;
+            }
+        }
+        + p {
+            @include breakpoint(max-width 767px) {
+                margin-top: 5px;
             }
         }
     }
