@@ -242,7 +242,7 @@ header {
                     display: inline-block;
                     img {
                         width: auto;
-                        height: 30px;
+                        height: 40px;
                         @include breakpoint(768px) {
                             width: 95px;
                             height: auto;
