@@ -3188,6 +3188,7 @@ body.opened {
   padding: 20px 20px 0;
   margin-bottom: -20px;
   overflow: auto;
+  z-index: 1;
 }
 @media (min-width: 768px) {
   .mobile-tab {
@@ -3200,6 +3201,7 @@ body.opened {
   list-style: none;
   font-weight: 400;
   font-family: 'Open Sans', sans-serif;
+  text-transform: uppercase;
 }
 .mobile-tab > ul::after {
   content: '';
