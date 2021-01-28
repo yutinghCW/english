@@ -8,7 +8,7 @@
     background-color: $gray-100;
     border: 1px solid $gray-200;
     @include transition(bottom 1s);
-    z-index: 3;
+    z-index: 4;
     &.hide {
         bottom: -100%;
     }
@@ -20,11 +20,37 @@
         @include breakpoint(max-width 1023px) {
             font-size: 0.875rem;
         }
+        p {
+            margin-top: 0;
+            font-size: 0.75em;
+            line-height: 1.25;
+        }
+        a {
+            color: $gray-500;
+            text-decoration: underline;
+        }
+        a:hover {
+            color: $primary;
+        }
     }
     .bulletin__btn {
         margin-top: 10px;
         @include breakpoint(1024px) {
             margin-top: 20px;
+        }
+        a#cookie-accept-btn {
+            display: inline-block;
+            padding: 0.625em 1.25em;
+            color: $white;
+            font-size: 0.875em;
+            text-align: center;
+            line-height: 1;
+            background-color: $gray-500;
+            cursor: pointer;
+            &:hover {
+                color: $white;
+                background-color: $primary;
+            }
         }
     }
 }

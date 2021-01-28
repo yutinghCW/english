@@ -134,7 +134,7 @@ $(function () {
 	$("form.search .closeTouch").click(function () {
 		$("form.search").removeClass("fadein");
 	});
-	$(window).load(function () {
+	$(window).on('load', function () {
 		// etu height
 		$(".etu-item-list").each(function () {
 			if ($(this).outerHeight() < 20) {

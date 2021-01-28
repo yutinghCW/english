@@ -3884,7 +3884,7 @@ aside .media .pic::after {
   position: absolute;
   top: 100%;
   left: 50%;
-  width: 180px;
+  width: 210px;
   padding: 5px 10px;
   color: #fff;
   font-size: 0.875em;
@@ -3978,6 +3978,14 @@ aside .media .pic::after {
 }
 .sns-list.fixed > div.link button:hover {
   color: #D60C18;
+}
+.sns-list.fixed .link .copy-success {
+  top: 50%;
+  left: 100%;
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 .collect {
@@ -4682,99 +4690,70 @@ section.list-link > ul:not(.etu-item-list) li a:hover {
   background-color: #be0b15;
 }
 
-.cookies {
+.bulletin {
   position: fixed;
-  left: 50%;
+  left: 0;
   bottom: 0;
   width: 100%;
-  max-width: 1248px;
-  background-color: #95ffff;
-  -moz-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  -webkit-transform: translateX(-50%);
-  transform: translateX(-50%);
-  z-index: 1;
+  padding: 15px 20px 10px;
+  font-size: 0.875rem;
+  background-color: #EEEEEE;
+  border: 1px solid #D3D5D7;
+  -moz-transition: bottom 1s;
+  -o-transition: bottom 1s;
+  -webkit-transition: bottom 1s;
+  transition: bottom 1s;
+  z-index: 4;
 }
-
-.cookies .container {
-  width: 100% !important;
-  padding: 20px 15px;
-  margin-right: auto;
-  margin-left: auto;
+.bulletin.hide {
+  bottom: -100%;
 }
-
-.cookies .container p {
+@media (min-width: 1024px) {
+  .bulletin {
+    width: 265px;
+    padding: 30px 25px 20px;
+  }
+}
+@media (max-width: 1023px) {
+  .bulletin .bulletin__txt {
+    font-size: 0.875rem;
+  }
+}
+.bulletin .bulletin__txt p {
   margin-top: 0;
-  font-size: 0.875em;
-  line-height: 1.5;
+  font-size: 0.75em;
+  line-height: 1.25;
 }
-
-.cookies a#cookie-know-button {
+.bulletin .bulletin__txt a {
+  color: #48545D;
+  text-decoration: underline;
+}
+.bulletin .bulletin__txt a:hover {
+  color: #D60C18;
+}
+.bulletin .bulletin__btn {
+  margin-top: 10px;
+}
+@media (min-width: 1024px) {
+  .bulletin .bulletin__btn {
+    margin-top: 20px;
+  }
+}
+.bulletin .bulletin__btn a#cookie-accept-btn {
   display: inline-block;
   padding: 0.625em 1.25em;
   color: #fff;
   font-size: 0.875em;
   text-align: center;
   line-height: 1;
-  background-color: #939EA7;
-  border: 1px solid #939EA7;
-}
-
-.cookies a#cookie-know-button:hover {
-  color: #48545D;
-  background-color: #fff;
-}
-
-.cookies-txt a {
-  color: #48545D;
-  text-decoration: underline;
-}
-
-.cookies-txt a:hover {
-  color: #D60C18;
-}
-
-.cookies-a {
-  text-align: center;
-}
-.cookies-a a {
-  display: block;
-  max-width: 200px;
-  padding: 10px;
-  margin: auto;
-  color: #fff;
-  text-align: center;
-  text-transform: uppercase;
   background-color: #48545D;
   cursor: pointer;
 }
-.cookies-a a:hover {
+.bulletin .bulletin__btn a#cookie-accept-btn:hover {
+  color: #fff;
   background-color: #D60C18;
 }
 
-@media (min-width: 768px) {
-  .cookies .container {
-    display: flex;
-    align-items: center;
-  }
-
-  .cookies-txt {
-    display: flex;
-    width: calc(100% - 100px);
-    padding-right: 20px;
-  }
-
-  .cookies .container p {
-    margin-bottom: 0;
-    font-size: 0.875em;
-    line-height: 1.75;
-  }
-
-  .cookies-a {
-    width: 100px;
-    text-align: right;
-  }
-}
 .class-header {
   width: 100%;
   padding-top: 20px;
@@ -5245,44 +5224,6 @@ ul.article__keyword li a::-moz-focus-inner {
 }
 .download .nextArticle:hover span:last-child {
   color: #D60C18;
-}
-
-.bulletin {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  padding: 15px 20px 10px;
-  font-size: 0.875rem;
-  background-color: #EEEEEE;
-  border: 1px solid #D3D5D7;
-  -moz-transition: bottom 1s;
-  -o-transition: bottom 1s;
-  -webkit-transition: bottom 1s;
-  transition: bottom 1s;
-  z-index: 3;
-}
-.bulletin.hide {
-  bottom: -100%;
-}
-@media (min-width: 1024px) {
-  .bulletin {
-    width: 265px;
-    padding: 30px 25px 20px;
-  }
-}
-@media (max-width: 1023px) {
-  .bulletin .bulletin__txt {
-    font-size: 0.875rem;
-  }
-}
-.bulletin .bulletin__btn {
-  margin-top: 10px;
-}
-@media (min-width: 1024px) {
-  .bulletin .bulletin__btn {
-    margin-top: 20px;
-  }
 }
 
 @media (min-width: 768px) {
