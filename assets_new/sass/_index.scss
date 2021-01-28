@@ -1,6 +1,6 @@
 .index-page {
     @include breakpoint(768px) {
-        min-width: $index;
+        min-width: 1288px;
     }
     > .banner {
         min-height: 112px;
@@ -20,12 +20,6 @@
             @include translateY(0);
             li {
                 border-left-color: $white;
-                &.userName {
-                    background-image: url('../img/download_arrow_white.png');
-                    &.opened {
-                        background-image: url('../img/upload_arrow_white.png');
-                    }
-                }
                 a {
                     color: $white;
                     &:hover {
@@ -53,7 +47,7 @@
         }
         .main-header .main-header-body {
             @include breakpoint(768px) {
-                width: 1280px;
+                width: 1288px;
             }
             .logo a img {
                 @include breakpoint(768px) {

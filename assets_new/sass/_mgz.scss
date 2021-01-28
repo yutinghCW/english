@@ -9,6 +9,7 @@
 
 .mgz-index-page {
     .mgzIndexList {
+        min-height: 10px;
         @include listrest(0 -10px, 0, none);
         font-size: 0;
         >li {

@@ -11,6 +11,9 @@ body {
     @include breakpoint(1024px) {
         font-display: swap;
     }
+    @include breakpoint(768px) {
+        min-width: ($article+10);
+    }
 }
 
 * {

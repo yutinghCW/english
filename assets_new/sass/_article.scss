@@ -10,6 +10,15 @@
         @include breakpoint(1200px) {
             font-weight: 300;
         }
+        > h3.subtitle-block {
+            margin: 10px 0 0 0.5em;
+            padding-left: 0.5em;
+            color: $gray-400;
+            font-size: 1.125rem;
+            font-weight: 400;
+            line-height: 1;
+            border-left: 1px solid $gray-400;
+        }
         >h1 {
             margin-top: 0;
             margin-bottom: 0;
@@ -18,9 +27,6 @@
             font-size: 1.875em;
             line-height: 1.2;
             font-weight: 400;
-            @include breakpoint(768px) {
-                margin-right: -320px;
-            }
         }
         p,
         ul,
@@ -207,7 +213,7 @@
             }
             >* {
                 font-size: 0.875rem;
-                margin-right: 0.875rem;
+                // margin-right: 0.875rem;
             }
             a {
                 color: $primary;

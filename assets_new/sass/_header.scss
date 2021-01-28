@@ -22,7 +22,7 @@ header {
         margin: auto;
         @include translateY(-50%);
         z-index: 3;
-        @include breakpoint(max-width 767px) {
+        @include breakpoint(max-width 1023px) {
             display: none;
         }
         li {
@@ -98,49 +98,6 @@ header {
                 }
                 &:hover ul {
                     display: block;
-                }
-            }
-        }
-    }
-    .thirdNav {
-        display: none;
-        position: absolute;
-        top: 100%;
-        right: 0;
-        width: 125px;
-        font-size: 0.875rem;
-        text-align: left;
-        border: 1px solid $gray-100;
-        background-color: $white;
-        @include breakpoint(1024px) {
-            top: 26px;
-        }
-        .dropdown-menu {
-            @include listrest(0,
-            1em,
-            none);
-            li {
-                &.myaccount,
-                &.userName {
-                    padding-bottom: 10px;
-                    margin-bottom: 10px;
-                    border-bottom: 1px solid $gray-100;
-                }
-                &.userName {
-                    font-weight: 600;
-                }
-                &.signout {
-                    padding-top: 10px;
-                    margin-top: 10px;
-                    border-top: 1px solid $gray-100;
-                }
-            }
-            a {
-                display: block;
-                color: $gray-500;
-                line-height: 30px;
-                &:hover {
-                    color: $primary;
                 }
             }
         }
