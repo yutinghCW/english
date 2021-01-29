@@ -5341,6 +5341,15 @@ ul.article__keyword li a::-moz-focus-inner {
 .article-page article .nevin {
   position: relative;
 }
+.article-page article .nevin.fz0 {
+  font-size: 100%;
+}
+.article-page article .nevin.fz1 {
+  font-size: 110%;
+}
+.article-page article .nevin.fz2 {
+  font-size: 120%;
+}
 .article-page article .nevin h2 {
   margin: 1.85em 0;
   font-size: 1.25em;

@@ -120,6 +120,15 @@
         }
         .nevin {
             position: relative;
+            &.fz0 {
+                font-size: 100%;
+            }
+            &.fz1 {
+                font-size: 110%;
+            }
+            &.fz2 {
+                font-size: 120%;
+            }
             h2 {
                 margin: 1.85em 0;
                 font-size: 1.25em;
