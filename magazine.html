@@ -37,18 +37,11 @@
     <link href="https://english.cw.com.tw/assets_new/smart-app-banner/smart-app-banner.css" rel="stylesheet">
 </head>
 <body class="single-magz-page">
-    <div class="cookies" id="cookies" v-if="show_cookie_bar" v-cloak>
-        <div class="container">
-            <div class="cookies-txt">
-                <p>
-                    This website uses cookies and other technologies to help us provide you with better content and customized services. If you want to continue to enjoy this website’s content, please agree to our use of cookies. For more information on cookies and their use, please see our latest
-                    <a href="privacy.html">Privacy Policy.</a>
-                </p>
-            </div>
-            <div class="cookies-a">
-                <a id="cookie-accept-btn" v-on:click="postCookie">Accept</a>
-            </div>
+    <div id="cookies" class="bulletin">
+        <div class="bulletin__txt">
+            <p>This website uses cookies and other technologies to help us provide you with better content and customized services. If you want to continue to enjoy this website’s content, please agree to our use of cookies. For more information on cookies and their use, please see our latest <a href="https://dev-english.cw.com.tw/privacy-policy">Privacy Policy.</a></p>
         </div>
+        <div class="bulletin__btn text-center"><a id="cookie-accept-btn">Accept</a></div>
     </div>
     <noscript>
         <iframe src="//www.googletagmanager.com/ns.html?id=GTM-TXLD77" height="0" width="0" style="display:none;visibility:hidden"></iframe>
