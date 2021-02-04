@@ -174,12 +174,14 @@ $(function () {
 });
 $(function(){
     // 複製網址
-    document.getElementById("shareCopy").addEventListener("click", function() {
-        copyToClipboard(document.getElementById("copyTarget"));
-    });
-    document.getElementById("shareCopyBottom").addEventListener("click", function() {
-        copyToClipboard(document.getElementById("copyTargetBottom"));
-    });
+	if ( window.location.href.indexOf('/article/') > 0 ) {
+		document.getElementById("shareCopy").addEventListener("click", function() {
+			copyToClipboard(document.getElementById("copyTarget"));
+		});
+		document.getElementById("shareCopyBottom").addEventListener("click", function() {
+			copyToClipboard(document.getElementById("copyTargetBottom"));
+		});
+	}
     $("#shareCopy, #shareCopyBottom").click(function(){
         $(this).siblings().fadeIn();
         setTimeout(function(){
